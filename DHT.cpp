@@ -5,16 +5,20 @@ written by Adafruit Industries
 */
 
 #include "DHT.h"
-
+/*
 DHT::DHT(uint8_t pin, uint8_t type, uint8_t count) {
   _pin = pin;
   _type = type;
   _count = count;
   firstreading = true;
 }
-
-void DHT::begin(void) {
+*/
+void DHT::begin(uint8_t pin, uint8_t type, uint8_t count) {
   // set up the pins!
+  _pin = pin;
+  _type = type;
+  _count = count;
+  firstreading = true;
   pinMode(_pin, INPUT);
   digitalWrite(_pin, HIGH);
   _lastreadtime = 0;

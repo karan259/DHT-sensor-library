@@ -15,13 +15,13 @@
 // Connect pin 4 (on the right) of the sensor to GROUND
 // Connect a 10K resistor from pin 2 (data) to pin 1 (power) of the sensor
 
-DHT dht(DHTPIN, DHTTYPE);
+DHT dht;//(DHTPIN, DHTTYPE);
 
 void setup() {
   Serial.begin(9600); 
   Serial.println("DHTxx test!");
  
-  dht.begin();
+  dht.begin(DHTPIN, DHTTYPE);
 }
 
 void loop() {
